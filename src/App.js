@@ -1,24 +1,145 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Chatbot from "./chatbot/Chatbot";
+import Crop from "./components/Crop";
+import Navbar from "./components/Navbar";
 
 function App() {
+  var cropData = [
+    {
+      cropName: "wheat",
+      cropCost: "100",
+      cropYield: "10",
+    },
+    {
+      cropName: "rice",
+      cropCost: "120",
+      cropYield: "9",
+    },
+    {
+      cropName: "soyabean",
+      cropCost: "80",
+      cropYield: "12",
+    },
+    {
+     cropName: "wheat",
+     cropCost: "100",
+     cropYield: "10",
+   },
+   {
+     cropName: "rice",
+     cropCost: "120",
+     cropYield: "9",
+   },
+   {
+     cropName: "soyabean",
+     cropCost: "80",
+     cropYield: "12",
+   },{
+     cropName: "wheat",
+     cropCost: "100",
+     cropYield: "10",
+   },
+   {
+     cropName: "rice",
+     cropCost: "120",
+     cropYield: "9",
+   },
+   {
+     cropName: "soyabean",
+     cropCost: "80",
+     cropYield: "12",
+   },{
+     cropName: "wheat",
+     cropCost: "100",
+     cropYield: "10",
+   },
+   {
+     cropName: "rice",
+     cropCost: "120",
+     cropYield: "9",
+   },
+   {
+     cropName: "soyabean",
+     cropCost: "80",
+     cropYield: "12",
+   },{
+     cropName: "wheat",
+     cropCost: "100",
+     cropYield: "10",
+   },
+   {
+     cropName: "rice",
+     cropCost: "120",
+     cropYield: "9",
+   },
+   {
+     cropName: "soyabean",
+     cropCost: "80",
+     cropYield: "12",
+   },{
+     cropName: "wheat",
+     cropCost: "100",
+     cropYield: "10",
+   },
+   {
+     cropName: "rice",
+     cropCost: "120",
+     cropYield: "9",
+   },
+   {
+     cropName: "soyabean",
+     cropCost: "80",
+     cropYield: "12",
+   },{
+     cropName: "wheat",
+     cropCost: "100",
+     cropYield: "10",
+   },
+   {
+     cropName: "rice",
+     cropCost: "120",
+     cropYield: "9",
+   },
+   {
+     cropName: "soyabean",
+     cropCost: "80",
+     cropYield: "12",
+   },{
+     cropName: "wheat",
+     cropCost: "100",
+     cropYield: "10",
+   },
+   {
+     cropName: "rice",
+     cropCost: "120",
+     cropYield: "9",
+   },
+   {
+     cropName: "soyabean",
+     cropCost: "80",
+     cropYield: "12",
+   },{
+     cropName: "wheat",
+     cropCost: "100",
+     cropYield: "10",
+   },
+   {
+     cropName: "rice",
+     cropCost: "120",
+     cropYield: "9",
+   },
+   {
+     cropName: "soyabean",
+     cropCost: "80",
+     cropYield: "12",
+   },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Chatbot />
+      <Navbar />
+      <Crop cropData={cropData} />
+    </>
   );
 }
 

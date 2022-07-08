@@ -9,3 +9,7 @@ exports.getAccountNumber = () =>{
 exports.getName = () =>{
      return 'samarth goswami';
 }
+
+exports.getTime = () =>{
+     return 'Today\'s time';
+}

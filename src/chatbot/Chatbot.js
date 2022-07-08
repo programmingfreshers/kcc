@@ -8,10 +8,11 @@ function Chatbot() {
     position: "fixed",
     bottom: "50px",
     right: "50px",
-    height: "50px",
-    width: "50px",
-    border: "solid black 2px",
-    borderRadius: "10px",
+    height: "80px",
+    width: "80px",
+    borderRadius: "35px",
+    textAlign: "center",
+    backgroundColor: "#FFFFFF",
   };
   const chatWindow = {
     position: "fixed",
@@ -23,12 +24,10 @@ function Chatbot() {
     border: "solid black 2px",
     borderRadius: "10px",
   };
-
-  const [floatingMessage, setfloatingMessage] = useState([
-    "time",
-    "date",
-    "personal",
-  ]);
+  const initialFloatingMessages = ["time", "date", "personal"];
+  const [floatingMessage, setfloatingMessage] = useState(
+    initialFloatingMessages
+  );
   const [status, setStatus] = useState(false);
   const [message, setMessage] = useState("");
   const [messageList, setMessageList] = useState([
@@ -40,7 +39,7 @@ function Chatbot() {
   const [state, setState] = useState(initialWindow);
 
   const postMessage = () => {
-    if (message != "") {
+    if (message !== "") {
       var ls = [];
       messageList.map((elem) => {
         ls.push(elem);
@@ -82,9 +81,8 @@ function Chatbot() {
       setState(initialWindow);
     }
   };
-
   const selectedMessage = (event) => {
-    if (event.target.value != null) {
+    if (event.target.value !== null) {
       var lss = [];
       messageList.map((elem) => {
         lss.push(elem);
@@ -95,7 +93,8 @@ function Chatbot() {
       });
       setMessageList(lss);
     }
-    if (event.target.value === null) {
+    if(event.target.value === 'time'){
+      sendBotMessage(controller.getTime()) 
     } else if (event.target.value === "date") {
       sendBotMessage(controller.getDate());
     } else if (event.target.value === "Account details") {
@@ -171,8 +170,8 @@ function Chatbot() {
                           left: "60px",
                           border: "magenta solid 2px",
                         }}
-                        onClick={selectedMessage}
                         value={elem}
+                        onClick={selectedMessage}
                       >
                         {elem}
                       </button>
@@ -209,7 +208,9 @@ function Chatbot() {
             </div>
           </div>
         ) : (
-          <></>
+          <>
+            <img src="https://img.icons8.com/bubbles/80/000000/speech-bubble.png" />
+          </>
         )}
       </div>
     </>

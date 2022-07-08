@@ -8,8 +8,8 @@ function Chatbot() {
     position: "fixed",
     bottom: "50px",
     right: "50px",
-    height: "80px",
-    width: "80px",
+    height: "100px",
+    width: "100px",
     borderRadius: "35px",
     textAlign: "center",
     backgroundColor: "#FFFFFF",
@@ -209,7 +209,7 @@ function Chatbot() {
           </div>
         ) : (
           <>
-            <img src="https://img.icons8.com/bubbles/80/000000/speech-bubble.png" />
+            <img src="https://img.icons8.com/bubbles/100/000000/speech-bubble.png" />
           </>
         )}
       </div>
